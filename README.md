@@ -1,1 +1,1 @@
-Web-Application-Blog-Project
+Web Application Blog Project
