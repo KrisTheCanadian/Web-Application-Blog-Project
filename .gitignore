@@ -135,4 +135,4 @@ dmypy.json
 .pytype/
 # idea 
 .idea
-secrets.py
+app/secrets.py
