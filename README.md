@@ -4,3 +4,13 @@ Inspired by [@CoreyMSchafer](https://github.com/CoreyMSchafer) 's Flask Tutorial
 
 The goal of this project was to learn how to use create a Web Application using the Flask Framework.
 
+Dependencies:
+- Python 3.7+
+- Pillow
+- flask_login
+- flask-bcrypt
+- flask-sqlalchemy
+- flask-wtf
+- flask
+
+
