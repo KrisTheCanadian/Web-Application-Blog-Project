@@ -13,4 +13,15 @@ Dependencies:
 - flask-wtf
 - flask
 
+Make sure to create app/secrets.py and in your secrets.py add the following:
+'''python
+SECRET_KEY = 'SOME RANDOM STRING'
+'''
 
+Ways to generate a secure random string:
+'''sh
+python3
+>>> import os,binascii
+>>> print binascii.b2a_hex(os.urandom(15))
+"c84766ca4a3ce52c3602bbf02ad1f7"
+'''
