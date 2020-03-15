@@ -11,6 +11,7 @@ Dependencies:
 - flask-bcrypt
 - flask-sqlalchemy
 - flask-wtf
+<<<<<<< HEAD
 - flask-mail
 - flask
 
@@ -23,3 +24,11 @@ Dependencies:
 >
 >Note: If you are using Gmail. You need to turn on '
 Less secure app access' in your Gmail Account Security.
+=======
+- flask
+
+> Make sure to create app/secrets.py and in your secrets.py add the following:
+> SECRET_KEY = 'SOME RANDOM STRING'
+
+
+>>>>>>> master
