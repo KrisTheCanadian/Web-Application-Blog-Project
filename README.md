@@ -18,7 +18,9 @@ Dependencies:
 > Make sure to create app/secrets.py and in your secrets.py add the following:
 > 
 >SECRET_KEY = 'SOME RANDOM STRING'
+>
 >MAIL_USER = 'USERNAME'
+>
 >MAIL_PASS = 'PASSWORD'
 >
 >Note: If you are using Gmail. You need to turn on '
