@@ -14,6 +14,7 @@ Dependencies:
 - flask-mail
 - flask
 - secrets
+- bcrypt
 
 
 > Make sure to create app/secrets.py and in your secrets.py add the following:
