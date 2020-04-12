@@ -13,6 +13,7 @@ Dependencies:
 - flask-wtf
 - flask-mail
 - flask
+- secrets
 
 
 > Make sure to create app/secrets.py and in your secrets.py add the following:
