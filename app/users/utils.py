@@ -1,10 +1,11 @@
 import os
 import secrets
-from mailbox import Message
+from flask_mail import Message
 from PIL import Image
 from app import mail
 from app.secrets import MAIL_USER
 from flask import current_app, url_for
+
 
 def save_picture(form_picture):
     random_hex = secrets.token_hex(8)
@@ -24,11 +25,13 @@ def url_for(param, token, _external):
     pass
 
 
+# url_for returns none : {url_for('users.reset_token', token=token, _external=True)}
 def send_reset_email(user):
     token = user.get_reset_token()
     msg = Message('Password Reset Request', sender=MAIL_USER, recipients=[user.email])
     msg.body = f'''To reset your password, visit the following link:
-    {url_for('users.reset_token', token=token, _external=True)}
+    
+     http://127.0.0.1:5000/reset_password/{token} 
 
 If you did not make this  request then simply ignore this email and no changes will be made.
     '''
