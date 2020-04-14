@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template
 
-from app.models import Post
+from app.models import User, Post
 
 main = Blueprint('main', __name__)
 
@@ -15,4 +15,11 @@ def home():
 
 @main.route('/about')
 def about():
-    return render_template('about.html', title='About')
+    users = User.query.order_by(User.username)
+    posts = []
+    count = []
+    for user in users:
+        q = Post.query.filter_by(author=user).order_by(Post.date_posted.desc())
+        posts.append(q.first())
+        count.append(q.count())
+    return render_template('about.html', title='About', users=users, posts=posts, count=count)
